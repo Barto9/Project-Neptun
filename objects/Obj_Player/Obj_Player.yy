@@ -5,6 +5,7 @@
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":32,"eventType":9,"isDnD":true,},
   ],
   "managed": true,
   "overriddenProperties": [],
@@ -20,7 +21,7 @@
   "physicsGroup": 1,
   "physicsKinematic": false,
   "physicsLinearDamping": 0.1,
-  "physicsObject": false,
+  "physicsObject": true,
   "physicsRestitution": 0.1,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -35,7 +36,10 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"is_grounded","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":3,},
   ],
   "solid": false,
-  "spriteId": null,
+  "spriteId": {
+    "name": "Sprt_Player",
+    "path": "sprites/Sprt_Player/Sprt_Player.yy",
+  },
   "spriteMaskId": null,
   "visible": true,
 }
