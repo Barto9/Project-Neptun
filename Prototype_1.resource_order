@@ -17,9 +17,17 @@
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
   "ResourceOrderSettings": [
+    {"name":"Sprite5","order":16,"path":"sprites/Sprite5/Sprite5.yy",},
     {"name":"Sprt_Player_walking_left","order":2,"path":"sprites/Sprt_Player_walking_left/Sprt_Player_walking_left.yy",},
-    {"name":"Sprite2","order":1,"path":"sprites/Sprite2/Sprite2.yy",},
+    {"name":"Sprite_Floor_none","order":6,"path":"sprites/Sprite_Floor_none/Sprite_Floor_none.yy",},
+    {"name":"Sprt_knob","order":4,"path":"sprites/Sprt_knob/Sprt_knob.yy",},
+    {"name":"Sprite_Floor","order":1,"path":"sprites/Sprite_Floor/Sprite_Floor.yy",},
     {"name":"Sprt_Player_walking_right","order":3,"path":"sprites/Sprt_Player_walking_right/Sprt_Player_walking_right.yy",},
+    {"name":"Sprite7","order":17,"path":"sprites/Sprite7/Sprite7.yy",},
     {"name":"Floor","order":1,"path":"objects/Floor/Floor.yy",},
+    {"name":"Sprite8","order":18,"path":"sprites/Sprite8/Sprite8.yy",},
+    {"name":"Floor_red","order":3,"path":"objects/Floor_red/Floor_red.yy",},
+    {"name":"Object3","order":2,"path":"objects/Object3/Object3.yy",},
+    {"name":"Sprite_Floor_red","order":5,"path":"sprites/Sprite_Floor_red/Sprite_Floor_red.yy",},
   ],
 }
