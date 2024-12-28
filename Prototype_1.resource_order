@@ -1,5 +1,5 @@
 {
-  "FolderOrderSettings": [
+  "FolderOrderSettings":[
     {"name":"Animation Curves","order":12,"path":"folders/Animation Curves.yy",},
     {"name":"Extensions","order":14,"path":"folders/Extensions.yy",},
     {"name":"Fonts","order":7,"path":"folders/Fonts.yy",},
@@ -16,10 +16,28 @@
     {"name":"Tile Sets","order":2,"path":"folders/Tile Sets.yy",},
     {"name":"Timelines","order":8,"path":"folders/Timelines.yy",},
   ],
-  "ResourceOrderSettings": [
-    {"name":"Sprt_Player_walking_left","order":2,"path":"sprites/Sprt_Player_walking_left/Sprt_Player_walking_left.yy",},
-    {"name":"Sprite2","order":1,"path":"sprites/Sprite2/Sprite2.yy",},
-    {"name":"Sprt_Player_walking_right","order":3,"path":"sprites/Sprt_Player_walking_right/Sprt_Player_walking_right.yy",},
+  "ResourceOrderSettings":[
     {"name":"Floor","order":1,"path":"objects/Floor/Floor.yy",},
+    {"name":"oBlock_corner","order":7,"path":"objects/oBlock_corner/oBlock_corner.yy",},
+    {"name":"oBlock_edge","order":3,"path":"objects/oBlock_edge/oBlock_edge.yy",},
+    {"name":"oBlock_end","order":6,"path":"objects/oBlock_end/oBlock_end.yy",},
+    {"name":"oBlock_fill","order":4,"path":"objects/oBlock_fill/oBlock_fill.yy",},
+    {"name":"oBlock_full","order":8,"path":"objects/oBlock_full/oBlock_full.yy",},
+    {"name":"oBlock_mid","order":5,"path":"objects/oBlock_mid/oBlock_mid.yy",},
+    {"name":"oPlayer","order":2,"path":"objects/oPlayer/oPlayer.yy",},
+    {"name":"test_room","order":1,"path":"rooms/test_room/test_room.yy",},
+    {"name":"player_walk_right","order":1,"path":"sequences/player_walk_right/player_walk_right.yy",},
+    {"name":"Block_corner","order":11,"path":"sprites/Block_corner/Block_corner.yy",},
+    {"name":"Block_edge","order":9,"path":"sprites/Block_edge/Block_edge.yy",},
+    {"name":"Block_end","order":8,"path":"sprites/Block_end/Block_end.yy",},
+    {"name":"Block_fill","order":10,"path":"sprites/Block_fill/Block_fill.yy",},
+    {"name":"Block_full","order":12,"path":"sprites/Block_full/Block_full.yy",},
+    {"name":"Block_mid","order":7,"path":"sprites/Block_mid/Block_mid.yy",},
+    {"name":"sPlayer_air","order":6,"path":"sprites/sPlayer_air/sPlayer_air.yy",},
+    {"name":"sPlayer_idle","order":4,"path":"sprites/sPlayer_idle/sPlayer_idle.yy",},
+    {"name":"sPlayer_walk","order":5,"path":"sprites/sPlayer_walk/sPlayer_walk.yy",},
+    {"name":"Sprite2","order":1,"path":"sprites/Sprite2/Sprite2.yy",},
+    {"name":"Sprt_Player_walking_left","order":2,"path":"sprites/Sprt_Player_walking_left/Sprt_Player_walking_left.yy",},
+    {"name":"Sprt_Player_walking_right","order":3,"path":"sprites/Sprt_Player_walking_right/Sprt_Player_walking_right.yy",},
   ],
 }
