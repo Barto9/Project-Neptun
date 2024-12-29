@@ -43,7 +43,7 @@ if place_meeting(x, y+1, Floor)
 	y_speed = 0
 	if keyboard_check(ord("W"))
 	{
-		y_speed = -3
+		y_speed = -4
 	}
 }
 else
