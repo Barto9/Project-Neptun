@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=3 uid="uid://ddurxphw7iort"]
+[gd_scene load_steps=18 format=3 uid="uid://ddurxphw7iort"]
 
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_1sbex"]
 [ext_resource type="Texture2D" uid="uid://dwvie5w8cj8w1" path="res://sprites/player_spritesheet.png" id="1_iabq2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_isbc3"]
@@ -116,29 +117,31 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iqt0r"]
-size = Vector2(40, 56)
+size = Vector2(20, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u6xw2"]
+size = Vector2(9, 12)
 
-[node name="Player" type="RigidBody2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(544, 244)
+script = ExtResource("1_1sbex")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_7wf25")
-animation = &"idle"
+animation = &"fall"
+frame_progress = 0.297562
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
-position = Vector2(6, 4)
+position = Vector2(3, 1.5)
 shape = SubResource("RectangleShape2D_iqt0r")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(6, 3)
+position = Vector2(3.5, 0)
 shape = SubResource("RectangleShape2D_u6xw2")
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
