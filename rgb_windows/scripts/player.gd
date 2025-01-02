@@ -1,14 +1,19 @@
 extends CharacterBody2D
 
+signal switch_color
 
 @export var speed = 300.0
 @export var jump_velocity = 400.0
 
 func _ready() -> void:
-	pass
+	$AnimatedSprite2D.play()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("switch_color"):
+		switch_color.emit()
 	
 func _physics_process(delta: float) -> void:
-	$AnimatedSprite2D.play()
+	
 	
 	# Add the gravity.
 	if not is_on_floor():
