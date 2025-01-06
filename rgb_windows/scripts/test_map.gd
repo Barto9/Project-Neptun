@@ -12,9 +12,21 @@ func _process(delta: float) -> void:
 	var semi_transparent = Color(1,1,1,0.3)
 	var red = Color(1,0,0,1)
 	var green = Color(0,1,0,1)
-	var blue = Color8(0,75,255,255)
+	var blue = Color8(0,75,255,255) #Dlaczego Color8?
+	var white = Color(1, 1, 1, 1)
 	match layer:
 		0:
+			$Red_layer.modulate = red
+			$Red_layer.collision_enabled = true
+			
+			$Green_layer.modulate = green
+			$Green_layer.collision_enabled = true
+			
+			$Blue_layer.modulate = blue
+			$Blue_layer.collision_enabled = true
+			
+			$Player.modulate = white
+		1:
 			$Red_layer.modulate = red
 			$Red_layer.collision_enabled = true
 			
@@ -25,7 +37,7 @@ func _process(delta: float) -> void:
 			$Blue_layer.collision_enabled = false
 			
 			$Player.modulate = red
-		1:
+		2:
 			$Red_layer.modulate = semi_transparent
 			$Red_layer.collision_enabled = false
 			
@@ -36,7 +48,7 @@ func _process(delta: float) -> void:
 			$Blue_layer.collision_enabled = false
 			
 			$Player.modulate = green 
-		2:
+		3:
 			$Red_layer.modulate = semi_transparent
 			$Red_layer.collision_enabled = false
 			
@@ -51,5 +63,5 @@ func _process(delta: float) -> void:
 
 func _on_player_switch_color() -> void:
 	layer += 1
-	if layer > 2:
+	if layer > 3:
 		layer = 0
