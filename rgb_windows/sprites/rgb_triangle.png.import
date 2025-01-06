@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl7tclnyfo2sf"
-path="res://.godot/imported/stick_sprite.png-932e9b6c506da61111c3e99ba945a8ae.ctex"
+uid="uid://cmimonswynp6x"
+path="res://.godot/imported/rgb_triangle.png-e52bf7f2e85148b6268bcfa865645aff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/stick_sprite.png"
-dest_files=["res://.godot/imported/stick_sprite.png-932e9b6c506da61111c3e99ba945a8ae.ctex"]
+source_file="res://sprites/rgb_triangle.png"
+dest_files=["res://.godot/imported/rgb_triangle.png-e52bf7f2e85148b6268bcfa865645aff.ctex"]
 
 [params]
 
