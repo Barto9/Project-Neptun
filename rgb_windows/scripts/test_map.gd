@@ -1,6 +1,6 @@
 extends Node2D
 
-var color_treshold = 120
+var color_treshold = 0.3
 
 var semi_transparent = Color(1,1,1,0.3)
 var red = Color(1,0,0)
@@ -23,28 +23,38 @@ func _process(delta: float) -> void:
 		var g_val = controller.getGreen()
 		var b_val = controller.getBlue()
 		
-		$Red_layer.modulate = semi_transparent
-		$Red_layer.collision_enabled = false
-		
-		$Green_layer.modulate = semi_transparent
-		$Green_layer.collision_enabled = false
-		
-		$Blue_layer.modulate = semi_transparent
-		$Blue_layer.collision_enabled = false
-		
-		$Player.modulate = Color(r_val, g_val, b_val) #Nie dziala :(
-		
-		if(r_val > color_treshold):
+		if(!controller.posVector):
+			$Player.modulate = white
 			$Red_layer.modulate = red
 			$Red_layer.collision_enabled = true
-		
-		if(g_val > color_treshold):
 			$Green_layer.modulate = green
 			$Green_layer.collision_enabled = true
-		
-		if(b_val > color_treshold):
 			$Blue_layer.modulate = blue
 			$Blue_layer.collision_enabled = true
+		else:
+			
+			$Player.modulate = Color(r_val, g_val, b_val)
+			
+			$Red_layer.modulate = semi_transparent
+			$Red_layer.collision_enabled = false
+			
+			$Green_layer.modulate = semi_transparent
+			$Green_layer.collision_enabled = false
+			
+			$Blue_layer.modulate = semi_transparent
+			$Blue_layer.collision_enabled = false
+			
+			if(r_val > color_treshold):
+				$Red_layer.modulate = red
+				$Red_layer.collision_enabled = true
+			
+			if(g_val > color_treshold):
+				$Green_layer.modulate = green
+				$Green_layer.collision_enabled = true
+			
+			if(b_val > color_treshold):
+				$Blue_layer.modulate = blue
+				$Blue_layer.collision_enabled = true
 
 func _on_player_switch_color() -> void:
 	pass

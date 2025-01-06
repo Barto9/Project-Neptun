@@ -6,14 +6,10 @@ var isChanging
 #ToDo cos jest niesymetrycznie, lekko zawyza wartosc Red
 
 func getRed() -> float:
-	return map_angle_to_RGB(posVector.distance_to(Vector2(0, -1)))
+	return 1 - (posVector.distance_to(Vector2(0, -1))/2)
 
 func getBlue() -> float:
-	return map_angle_to_RGB(posVector.distance_to(Vector2(-1, 1)))
+	return 1 - (posVector.distance_to(Vector2(-0.86603, 0.5))/2)
 
 func getGreen() -> float:
-	return map_angle_to_RGB(posVector.distance_to(Vector2(1, 1)))
-
-func map_angle_to_RGB(value: float) -> float:
-	var temp = inverse_lerp(0, 3.1416, abs(value))
-	return lerp(255, 0, temp)
+	return 1 - (posVector.distance_to(Vector2(0.86603, 0.5))/2)
