@@ -24,6 +24,13 @@ func _process(delta: float) -> void:
 	elif position.length() <= deadzone:
 		global_position = controller.global_position
 	controller.posVector = (global_position - controller.global_position)/maxLength
+	
+	var pos_vector = controller.posVector
+	var red_value = controller.getRed()
+	var green_value = controller.getGreen()
+	var blue_value = controller.getBlue()
+	print(str(pos_vector) + " R: " + str(red_value) + " G: " + str(green_value) + " B: " + str(blue_value))
+
 
 func _on_button_button_down() -> void:
 	pressing = true
