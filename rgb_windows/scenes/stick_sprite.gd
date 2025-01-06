@@ -34,6 +34,8 @@ func _process(delta: float) -> void:
 
 func _on_button_button_down() -> void:
 	pressing = true
+	controller.isChanging = true
 
 func _on_button_button_up() -> void:
 	pressing = false
+	controller.isChanging = false
