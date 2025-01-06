@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 		$Blue_layer.modulate = semi_transparent
 		$Blue_layer.collision_enabled = false
 		
-		$Player.modulate = Color(r_val, g_val, b_val)
+		$Player.modulate = Color(r_val, g_val, b_val) #Nie dziala :(
 		
 		if(r_val > color_treshold):
 			$Red_layer.modulate = red
