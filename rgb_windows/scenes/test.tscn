@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://btcqice4rja36"]
+
+[ext_resource type="Script" path="res://scripts/test.gd" id="1_n25pa"]
+[ext_resource type="PackedScene" uid="uid://bu7doqbgcsc2l" path="res://scenes/red_scene.tscn" id="2_vtpoh"]
+[ext_resource type="PackedScene" uid="uid://svyrbkgi1hd5" path="res://scenes/green_scene.tscn" id="3_bo61i"]
+[ext_resource type="PackedScene" uid="uid://17agygou688f" path="res://scenes/blue_scene.tscn" id="4_slbyr"]
+
+[node name="Node" type="Node"]
+script = ExtResource("1_n25pa")
+
+[node name="Window" type="Window" parent="."]
+title = "Red"
+position = Vector2i(0, 36)
+size = Vector2i(900, 600)
+
+[node name="Red_scene" parent="Window" instance=ExtResource("2_vtpoh")]
+
+[node name="Window2" type="Window" parent="."]
+title = "Green"
+position = Vector2i(0, 36)
+size = Vector2i(900, 600)
+
+[node name="Green_scene" parent="Window2" instance=ExtResource("3_bo61i")]
+
+[node name="Window3" type="Window" parent="."]
+title = "Blue"
+position = Vector2i(0, 36)
+size = Vector2i(900, 600)
+
+[node name="Blue_scene" parent="Window3" instance=ExtResource("4_slbyr")]

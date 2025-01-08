@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://c08std24ix6u7"]
+[gd_scene load_steps=5 format=4 uid="uid://c08std24ix6u7"]
 
 [ext_resource type="Script" path="res://scripts/test_map.gd" id="1_75fmb"]
-[ext_resource type="TileSet" uid="uid://m2sx6o4um3wk" path="res://default_tileset.tres" id="1_uxkdi"]
+[ext_resource type="TileSet" uid="uid://m2sx6o4um3wk" path="res://tilesets/default_tileset.tres" id="1_uxkdi"]
 [ext_resource type="PackedScene" uid="uid://ddurxphw7iort" path="res://scenes/player.tscn" id="2_td4xg"]
+[ext_resource type="PackedScene" uid="uid://4pjv11ca3ofx" path="res://scenes/null_zone.tscn" id="4_akfty"]
 
 [node name="Test_Map" type="Node2D"]
 script = ExtResource("1_75fmb")
@@ -42,4 +43,10 @@ position = Vector2(192, 496)
 speed = 400.0
 jump_velocity = 500.0
 
+[node name="Null_zone" parent="." instance=ExtResource("4_akfty")]
+position = Vector2(279, 26)
+scale = Vector2(6.38, 6.38)
+
 [connection signal="switch_color" from="Player" to="." method="_on_player_switch_color"]
+[connection signal="entered" from="Null_zone" to="Player" method="_on_null_zone_entered"]
+[connection signal="exited" from="Null_zone" to="Player" method="_on_null_zone_exited"]

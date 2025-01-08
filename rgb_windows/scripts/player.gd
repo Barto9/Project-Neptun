@@ -5,11 +5,13 @@ signal switch_color
 @export var speed = 300.0
 @export var jump_velocity = 400.0
 
+var isNull_zone = false
+
 func _ready() -> void:
 	$AnimatedSprite2D.play()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("switch_color"):
+	if Input.is_action_just_pressed("switch_color") && isNull_zone == false:
 		switch_color.emit()
 	
 func _physics_process(delta: float) -> void:
@@ -45,3 +47,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
 	move_and_slide()
+
+func _on_null_zone_entered() -> void:
+	isNull_zone = true
+
+func _on_null_zone_exited() -> void:
+	isNull_zone = false
