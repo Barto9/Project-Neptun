@@ -11,8 +11,9 @@ func _ready() -> void:
 	$AnimatedSprite2D.play()
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("switch_color") && isNull_zone == false:
-		switch_color.emit()
+	pass
+	#if Input.is_action_just_pressed("switch_color") && isNull_zone == false:
+	#	switch_color.emit()
 	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
