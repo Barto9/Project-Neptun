@@ -41,6 +41,8 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * speed
+		if Input.is_action_just_pressed("dash"):
+			velocity.x += direction * 2000
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
