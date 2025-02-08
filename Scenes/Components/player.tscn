@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0n0cgk0y5o0f"]
+
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_r7bti"]
+[ext_resource type="Texture2D" uid="uid://cu2pubxj0p68d" path="res://Art/AnimationSheet.png" id="2_ed1p3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilpyh"]
+size = Vector2(8, 17)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_r7bti")
+jump_velocity = 150.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_ilpyh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("2_ed1p3")
+hframes = 8
+vframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../../../..")

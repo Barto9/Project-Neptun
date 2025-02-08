@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://bduj78pk3bb3d"]
+
+[ext_resource type="Script" path="res://Scripts/ScreensContoller.gd" id="1_v8y07"]
+[ext_resource type="PackedScene" uid="uid://c04lfikrwec55" path="res://Scenes/Levels/old_tv_screen.tscn" id="2_4tekv"]
+[ext_resource type="PackedScene" uid="uid://d0n0cgk0y5o0f" path="res://Scenes/Components/player.tscn" id="3_30mau"]
+
+[sub_resource type="Gradient" id="Gradient_xvfs0"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_14vyg"]
+gradient = SubResource("Gradient_xvfs0")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_83gd2"]
+resource_local_to_scene = true
+size = Vector2(20, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_51vpi"]
+resource_local_to_scene = true
+size = Vector2(20, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csqqi"]
+resource_local_to_scene = true
+size = Vector2(20, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3apd"]
+resource_local_to_scene = true
+size = Vector2(20, 92)
+
+[node name="Main" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.886275, 0.917647, 1, 1)
+position = Vector2(322, 187)
+scale = Vector2(11.9063, 6.90625)
+texture = SubResource("GradientTexture2D_14vyg")
+
+[node name="ScreensContoller" type="Node2D" parent="." node_paths=PackedStringArray("tv_screens")]
+script = ExtResource("1_v8y07")
+tv_screens = [NodePath("TVScreen"), NodePath("TVScreen2"), NodePath("TVScreen3"), NodePath("TVScreen4")]
+
+[node name="TVScreen" parent="ScreensContoller" instance=ExtResource("2_4tekv")]
+
+[node name="TileMap" parent="ScreensContoller/TVScreen" index="1"]
+layer_0/tile_data = PackedInt32Array(393204, 458753, 3, 458740, 458753, 3, 393205, 458753, 3, 458741, 458753, 3, 393206, 458753, 3, 458742, 458753, 3, 393207, 458753, 3, 458743, 458753, 3, 393208, 458753, 3, 458744, 458753, 3, 393209, 458753, 3, 458745, 458753, 3, 393210, 458753, 3, 458746, 458753, 3, 393211, 458753, 3, 458747, 458753, 3, 393214, 458753, 3, 458750, 458753, 3, 393215, 458753, 3, 458751, 458753, 3, 327680, 458753, 3, 393216, 458753, 3, 327681, 458753, 3, 393217, 458753, 3, 327682, 458753, 3, 393218, 458753, 3, 327683, 458753, 3, 393219, 458753, 3, 327684, 458753, 3, 393220, 458753, 3, 327685, 458753, 3, 393221, 458753, 3, 327686, 458753, 3, 393222, 458753, 3, 327687, 458753, 3, 393223, 458753, 3, 327688, 458753, 3, 393224, 458753, 3, 327689, 458753, 3, 393225, 458753, 3, 327690, 458753, 3, 393226, 458753, 3, 327691, 458753, 3, 393227, 458753, 3)
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen/RightBarrier" index="0"]
+shape = SubResource("RectangleShape2D_83gd2")
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen/LeftBarrier" index="0"]
+shape = SubResource("RectangleShape2D_83gd2")
+
+[node name="Player" parent="ScreensContoller/TVScreen" instance=ExtResource("3_30mau")]
+unique_name_in_owner = true
+
+[node name="TVScreen2" parent="ScreensContoller" instance=ExtResource("2_4tekv")]
+position = Vector2(480, 88)
+metadata/placement = Vector2i(1, 1)
+
+[node name="TileMap" parent="ScreensContoller/TVScreen2" index="1"]
+layer_0/tile_data = PackedInt32Array(393204, 458753, 3, 458740, 458753, 3, 393205, 458753, 3, 458741, 458753, 3, 393206, 458753, 3, 458742, 458753, 3, 393207, 458753, 3, 458743, 458753, 3, 393208, 458753, 3, 458744, 458753, 3, 393209, 458753, 3, 458745, 458753, 3, 393210, 458753, 3, 458746, 458753, 3, 393211, 458753, 3, 458747, 458753, 3, 393214, 458753, 3, 458750, 458753, 3, 393215, 458753, 3, 458751, 458753, 3, 327680, 458753, 3, 393216, 458753, 3, 327681, 458753, 3, 393217, 458753, 3, 327682, 458753, 3, 393218, 458753, 3, 327683, 458753, 3, 393219, 458753, 3, 327684, 458753, 3, 393220, 458753, 3, 327685, 458753, 3, 393221, 458753, 3, 327686, 458753, 3, 393222, 458753, 3, 327687, 458753, 3, 393223, 458753, 3, 327688, 458753, 3, 393224, 458753, 3, 327689, 458753, 3, 393225, 458753, 3, 327690, 458753, 3, 393226, 458753, 3, 327691, 458753, 3, 393227, 458753, 3, 393212, 458753, 3, 458748, 458753, 3, 393213, 458753, 3, 458749, 458753, 3, 196606, 458753, 3, 262142, 458753, 3, 327678, 458753, 3, 196607, 458753, 3, 262143, 458753, 3, 327679, 458753, 3, 131072, 458753, 3, 196608, 458753, 3, 262144, 458753, 3, 131073, 458753, 3, 196609, 458753, 3, 262145, 458753, 3)
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen2/RightBarrier" index="0"]
+shape = SubResource("RectangleShape2D_51vpi")
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen2/LeftBarrier" index="0"]
+shape = SubResource("RectangleShape2D_51vpi")
+
+[node name="TVScreen3" parent="ScreensContoller" instance=ExtResource("2_4tekv")]
+position = Vector2(168, 260)
+metadata/placement = Vector2i(0, 0)
+
+[node name="TileMap" parent="ScreensContoller/TVScreen3" index="1"]
+layer_0/tile_data = PackedInt32Array(393204, 458753, 3, 458740, 458753, 3, 393205, 458753, 3, 458741, 458753, 3, 393206, 458753, 3, 458742, 458753, 3, 393207, 458753, 3, 458743, 458753, 3, 393208, 458753, 3, 458744, 458753, 3, 393209, 458753, 3, 458745, 458753, 3, 393210, 458753, 3, 458746, 458753, 3, 393211, 458753, 3, 458747, 458753, 3, 393214, 458753, 3, 458750, 458753, 3, 393215, 458753, 3, 458751, 458753, 3, 327680, 458753, 3, 393216, 458753, 3, 327681, 458753, 3, 393217, 458753, 3, 327682, 458753, 3, 393218, 458753, 3, 327683, 458753, 3, 393219, 458753, 3, 327684, 458753, 3, 393220, 458753, 3, 327685, 458753, 3, 393221, 458753, 3, 327686, 458753, 3, 393222, 458753, 3, 327687, 458753, 3, 393223, 458753, 3, 327688, 458753, 3, 393224, 458753, 3, 327689, 458753, 3, 393225, 458753, 3, 327690, 458753, 3, 393226, 458753, 3, 327691, 458753, 3, 393227, 458753, 3, 393212, 458753, 3, 458748, 458753, 3, 393213, 458753, 3, 458749, 458753, 3, 327677, 458753, 3, 327678, 458753, 3, 262143, 458753, 3, 327679, 458753, 3, 196608, 458753, 3, 262144, 458753, 3)
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen3/RightBarrier" index="0"]
+shape = SubResource("RectangleShape2D_csqqi")
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen3/LeftBarrier" index="0"]
+shape = SubResource("RectangleShape2D_csqqi")
+
+[node name="TVScreen4" parent="ScreensContoller" instance=ExtResource("2_4tekv")]
+position = Vector2(480, 260)
+metadata/placement = Vector2i(1, 0)
+
+[node name="TileMap" parent="ScreensContoller/TVScreen4" index="1"]
+layer_0/tile_data = PackedInt32Array(393204, 458753, 3, 458740, 458753, 3, 393205, 458753, 3, 458741, 458753, 3, 393206, 458753, 3, 458742, 458753, 3, 393207, 458753, 3, 458743, 458753, 3, 393208, 458753, 3, 458744, 458753, 3, 393209, 458753, 3, 458745, 458753, 3, 393210, 458753, 3, 458746, 458753, 3, 393211, 458753, 3, 458747, 458753, 3, 393214, 458753, 3, 458750, 458753, 3, 393215, 458753, 3, 458751, 458753, 3, 327680, 458753, 3, 393216, 458753, 3, 327681, 458753, 3, 393217, 458753, 3, 327682, 458753, 3, 393218, 458753, 3, 327683, 458753, 3, 393219, 458753, 3, 327684, 458753, 3, 393220, 458753, 3, 327685, 458753, 3, 393221, 458753, 3, 327686, 458753, 3, 393222, 458753, 3, 327689, 458753, 3, 393225, 458753, 3, 327690, 458753, 3, 393226, 458753, 3, 327691, 458753, 3, 393227, 458753, 3, 393212, 458753, 3, 458748, 458753, 3, 393213, 458753, 3, 458749, 458753, 3, -196597, 458753, 3, -131061, 458753, 3, -65525, 458753, 3, 11, 458753, 3, 65547, 458753, 3, 131083, 458753, 3, 196619, 458753, 3, 262155, 458753, 3)
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen4/RightBarrier" index="0"]
+shape = SubResource("RectangleShape2D_a3apd")
+
+[node name="CollisionShape2D" parent="ScreensContoller/TVScreen4/LeftBarrier" index="0"]
+shape = SubResource("RectangleShape2D_a3apd")
+
+[editable path="ScreensContoller/TVScreen"]
+[editable path="ScreensContoller/TVScreen2"]
+[editable path="ScreensContoller/TVScreen3"]
+[editable path="ScreensContoller/TVScreen4"]
